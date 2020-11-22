@@ -4,12 +4,14 @@
 
 " Open markdown files with Chrome.
 " autocmd BufEnter *.md exe 'noremap <F5> :!start C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p<CR>'
+" Consider that these commands will make a new file in the Working Directory,
+" so `:pwd` to see where you are, and `:cd` if necessary.
 noremap <F5> :!chromium --incognito %<CR>:p<CR>
 noremap <Leader>m :!markdown % > "%:t:r"."html"<CR>
-noremap <Leader>h :!pandoc % --from=gfm --to=html -o "%:t:r"."html --filter pandoc-plantuml"<CR>
-noremap <Leader>w :!pandoc % --from=gfm --to=mediawiki -o "%:t:r"."wiki --filter pandoc-plantuml"<CR>
-noremap <Leader>o :!pandoc % --from=gfm --to=odt -o "%:t:r"."odt --filter pandoc-plantuml"<CR>
-noremap <Leader>d :!pandoc % --from=gfm --to=docx -o "%:t:r"."docx --filter pandoc-plantuml"<CR>
+noremap <Leader>h :!pandoc % --from=gfm --to=html --filter pandoc-plantuml -o "%:t:r"."html"<CR>
+noremap <Leader>w :!pandoc % --from=gfm --to=mediawiki -o "%:t:r"."wiki"<CR>
+noremap <Leader>o :!pandoc % --from=gfm --to=odt  --filter pandoc-plantuml -o "%:t:r"."odt"<CR>
+noremap <Leader>d :!pandoc % --from=gfm --to=docx  --filter pandoc-plantuml -o "%:t:r"."docx"<CR>
 noremap <Leader>v :!okular % & <CR>
 " %!markdown fname<CR>
 
