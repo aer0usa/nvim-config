@@ -1,20 +1,21 @@
 " VimPlug:
 call plug#begin('~/.vim/plugged')
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/commentary'
-  Plug 'raimondi/delimitmate'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'ajh17/vimcompletesme'
+  Plug 'aklt/plantuml-syntax'
   Plug 'godlygeek/tabular'
+  Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'nlknguyen/papercolor-theme'
+  Plug 'othree/javascript-libraries-syntax'
+  Plug 'pangloss/vim-javascript'
+  Plug 'raimondi/delimitmate'
+  Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/syntastic'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-surround'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'nlknguyen/papercolor-theme'
-  Plug 'aklt/plantuml-syntax'
-  Plug 'pangloss/vim-javascript'
-  Plug 'tpope/vim-fugitive'
-  Plug 'ajh17/vimcompletesme'
-  Plug 'mxw/vim-jsx'
-  Plug 'othree/javascript-libraries-syntax'
-  Plug 'scrooloose/syntastic'
-  Plug 'scrooloose/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 " :source %
@@ -40,6 +41,7 @@ call plug#end()
   set ignorecase        "ignore the case when search texts
   set smartcase         "if searching text contains uppercase case will not be ignored
 " Lookings
+  set showtabline=1    "show tab line only if there is more than one tab
   set number           "line number
   set relativenumber   "line number relative to cursor
   set scrolloff=3      "Set 3 lines to the cursor - when moving vertically using j/k
@@ -54,12 +56,17 @@ call plug#end()
   " (uncomment to enable it)
   "au BufWinEnter * let w:m2=matchadd('Underlined', '\%>' . 80 . 'v.\+', -1)
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" ------------------------------------------------------------
 " Airline
   let g:airline_theme='papercolor'
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#formatter = 'default'
+" ------------------------------------------------------------
 " DelimitMate
   let delimitMate_expand_cr = 1
+  let delimitMate_expand_space = 1
+  let delimitMate_jump_expansion = 1
+" ------------------------------------------------------------
 " Syntastic
 " https://github.com/scrooloose/syntastic
 " :help syntastic
@@ -82,8 +89,11 @@ call plug#end()
   " let g:syntastic_javascript_jslint_multivar = "true"
   " let g:syntastic_javascript_jslint_devel = "true"
 " End Syntastic
+" ------------------------------------------------------------
 " NERDTree
-nmap <C-n> :NERDTreeToggle<CR>
+  nmap <C-n> :NERDTreeToggle<CR>
+  let g:NERDTreeQuitOnOpen = 1
+" EndNERDTree
 
 " Lorem Ipsum in register 'l': "lp
 let @l = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
