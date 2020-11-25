@@ -8,12 +8,15 @@
 " so `:pwd` to see where you are, and `:cd` if necessary.
 noremap <F5> :!chromium --incognito %<CR>:p<CR>
 noremap <Leader>m :!markdown % > "%:t:r"."html"<CR>
-noremap <Leader>h :!pandoc % --from=gfm --to=html --filter pandoc-plantuml -o "%:t:r"."html"<CR>
+noremap <Leader>h :!pandoc % --from=gfm --to=html -o "%:t:r"."html"<CR>
 noremap <Leader>w :!pandoc % --from=gfm --to=mediawiki -o "%:t:r"."wiki"<CR>
-noremap <Leader>o :!pandoc % --from=gfm --to=odt  --filter pandoc-plantuml -o "%:t:r"."odt"<CR>
-noremap <Leader>d :!pandoc % --from=gfm --to=docx  --filter pandoc-plantuml -o "%:t:r"."docx"<CR>
+noremap <Leader>o :!pandoc % --from=gfm --to=odt  -o "%:t:r"."odt"<CR>
+noremap <Leader>d :!pandoc % --from=gfm --to=docx  -o "%:t:r"."docx"<CR>
 noremap <Leader>v :!okular % & <CR>
 " %!markdown fname<CR>
+" An example of applying a filter:
+" p for Plantuml
+noremap <Leader>p :!pandoc % --from=gfm --to=html --filter pandoc-plantuml -o "%:t:r"."html"<CR>
 
 setl spell "Turn on spellcheck
 setl wrap "Wrap long lines
