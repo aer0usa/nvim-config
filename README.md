@@ -9,7 +9,7 @@ My init.vim and ftplugins
 curl -fLo ~/.local/share/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-* Make soft links from `javascript.vim`, `markdown.vim`, `plantuml.vim` to `~/.local/share/nvim/site/ftplugin/`
+* Make soft link from `ftplugin/` to `~/.local/share/nvim/site/ftplugin/`
 
 Unfortunately, the install and config folders seem to vary from platform to platform. YMMV.
 
