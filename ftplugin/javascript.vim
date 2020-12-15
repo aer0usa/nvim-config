@@ -22,6 +22,12 @@ let b:vcm_tab_complete = 'javascript'
 " https://github.com/othree/javascript-libraries-syntax.vim
   let g:used_javascript_libs = 'jquery,react'
 
+" Surround for Javascript
+  " Block comment on k for Komment
+  let b:surround_107 = "/*\r*/"
+  " Auto Indent see :help surround-issues
+  let b:surround_indent = 0
+
 " Run this js file in nodejs
 noremap <Leader>n :!node %<CR>
 
