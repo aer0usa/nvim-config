@@ -14,13 +14,18 @@ let b:vcm_tab_complete = 'javascript'
   " Experiment
   " autocmd FileType javascript set foldmethod=syntax
   " let g:javascript_ignore_javaScriptdoc = 1
-" Vim-JSX
+
+" Vim-JSX - DEPRECATED
 " https://github.com/mxw/vim-jsx
-  let g:jsx_ext_required = 0 " Zero allows JSX in normal JS files
+" let g:jsx_ext_required = 0 " Zero allows JSX in normal JS files
   " let g:jsx_pragma_required = 1 " restrict JSX to files with the pre-v0.12 @jsx React.DOM pragma
 " javscript-libraries-syntax
 " https://github.com/othree/javascript-libraries-syntax.vim
-  let g:used_javascript_libs = 'jquery,react'
+" let g:used_javascript_libs = 'jquery,react'
+
+" vim_jsx_pretty
+" https://github.com/MaxMEllon/vim-jsx-pretty
+  let g:vim_jsx_pretty_colorful_config = 1 " default 0
 
 " Surround for Javascript
   " Block comment on k for Komment
