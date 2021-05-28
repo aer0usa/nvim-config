@@ -78,11 +78,11 @@ call plug#end()
   let g:syntastic_check_on_open = 0
   let g:syntastic_check_on_wq = 0
   let g:syntastic_echo_current_error = 1
-  let g:syntastic_syntastic_mode_map = { "mode": "passive", "active_filetypes": ['js', 'jsx', 'xml', 'qml', 'plantuml', 'md'], "passive_filetypes": ['css'] }
   let g:syntastic_javascript_checkers = ["eslint"]
   let g:syntastic_xml_checkers = ["xmllint"]
   let g:syntastic_qml_checkers = ["qmllint"]
   let g:syntastic_markdown_checkers = ["proselint"]
+  let g:syntastic_syntastic_mode_map = { "mode": "passive", "active_filetypes": ['js', 'jsx', 'xml', 'qml', 'plantuml'], "passive_filetypes": ['css', 'markdown'] }
   " let g:syntastic_php_checkers = ["php"]
   " let g:syntastic_javascript_jslint_browser = "true"
   " let g:syntastic_javascript_jslint_for = "true"
