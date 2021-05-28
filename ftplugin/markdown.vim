@@ -18,12 +18,15 @@ noremap <Leader>v :!okular % & <CR>
 " p for Plantuml
 noremap <Leader>p :!pandoc --standalone --from=gfm --to=html --filter pandoc-plantuml % -o "%:t:r"."html"<CR>
 
+" Create html, open in browser
+noremap <Leader>b :!pandoc --standalone --from=gfm --to=html5 --css="%:t:r"."css" --metadata pagetitle="%:t:r" % -o "%:t:r"."html" && firefox --private-window "%:t:r"."html" &<CR>
+
 " Example with css
 " Notice the "-s" option to make a Standalone html doc, which includes the
 " <head> and <body> tags etc
 " pandoc -s --from=gfm --to=html -c markdown-styles.css --metadata pagetitle="Eric's Slide Rules" sliderules.md -o sliderules.html
 
-setl spell "Turn on spellcheck
+setlocal spell spelllang=en_us "Turn on spellcheck
 setl wrap "Wrap long lines
 setl tabstop=4
 setl shiftwidth=4
