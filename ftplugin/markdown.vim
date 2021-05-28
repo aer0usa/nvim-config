@@ -19,7 +19,7 @@ noremap <Leader>v :!okular % & <CR>
 noremap <Leader>p :!pandoc --standalone --from=gfm --to=html --filter pandoc-plantuml % -o "%:p:r"."html"<CR>
 
 " Create html, open in browser
-noremap <Leader>b :!pandoc --standalone --from=gfm --to=html5 --css="%:t:r"."css" --metadata pagetitle="%:t:r" % -o "%:t:r"."html" && firefox --private-window "%:t:r"."html" &<CR>
+noremap <Leader>b :!pandoc --standalone --from=gfm --to=html5 --css="%:p:r"."css" --metadata pagetitle="%:p:r" % -o "%:p:r"."html" && firefox --private-window "%:p:r"."html" &<CR>
 
 " Example with css
 " Notice the "-s" option to make a Standalone html doc, which includes the
