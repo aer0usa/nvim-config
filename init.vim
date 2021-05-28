@@ -50,6 +50,7 @@ call plug#end()
   set cursorline       "hilight the line of the cursor
   " set cursorcolumn     "hilight the column of the cursor
   set nowrap           "no line wrapping
+  set diffopt+=vertical "start diff mode with vertical split
   colorscheme PaperColor
   set background=dark
   " change the color of chars over the width of 80 into blue
