@@ -21,6 +21,16 @@ noremap <Leader>p :!pandoc --standalone --from=gfm --to=html --filter pandoc-pla
 " Create html, open in browser
 noremap <Leader>b :!pandoc --standalone --from=gfm --to=html5 --css="%:p:r"."css" --metadata pagetitle="%:p:r" % -o "%:p:r"."html" && firefox --private-window "%:p:r"."html" &<CR>
 
+" Surround for Markdown
+  " Curly Quotes on q for Quote
+  let b:surround_113 = "“\r”"
+  " Double asterisks on b for Bold
+  let b:surround_98 = "**\r**"
+  " Single asterisks on b for Emphasis
+  let b:surround_101 = "*\r*"
+  " Auto Indent see :help surround-issues
+  let b:surround_indent = 0
+
 " Example with css
 " Notice the "-s" option to make a Standalone html doc, which includes the
 " <head> and <body> tags etc
