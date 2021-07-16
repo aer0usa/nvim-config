@@ -27,6 +27,8 @@ let b:vcm_tab_complete = 'javascript'
   let b:surround_107 = "/*\r*/"
   " Auto Indent see :help surround-issues
   let b:surround_indent = 0
+  " Add angle brackets as delimiters matchable with %
+  set matchpairs+=<:>
 
 " Run this js file in nodejs
 noremap <Leader>n :!node %<CR>

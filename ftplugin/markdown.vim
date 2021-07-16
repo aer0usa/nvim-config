@@ -24,6 +24,9 @@ noremap <Leader>b :!pandoc --standalone --from=gfm --to=html5 --css="%:p:r"."css
 " Surround for Markdown
   " Curly Quotes on q for Quote
   let b:surround_113 = "“\r”"
+  " Set curly quotes as pairs matchable with %
+  set matchpairs+=“:”
+  set matchpairs+=‘:’
   " Double asterisks on b for Bold
   let b:surround_98 = "**\r**"
   " Single asterisks on b for Emphasis
