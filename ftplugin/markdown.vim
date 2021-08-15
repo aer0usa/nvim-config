@@ -10,13 +10,14 @@ noremap <F5> :!chromium --incognito %<CR>:p<CR>
 noremap <Leader>m :!markdown % > "%:p:r"."html"<CR>
 noremap <Leader>h :!pandoc --standalone --from=gfm --to=html5 --css="%:p:r"."css" --metadata pagetitle="%:p:r" % -o "%:p:r"."html"<CR>
 noremap <Leader>w :!pandoc % --from=gfm --to=mediawiki -o "%:p:r"."wiki"<CR>
-noremap <Leader>o :!pandoc % --from=gfm --to=odt  -o "%:p:r"."odt"<CR>
-noremap <Leader>d :!pandoc % --from=gfm --to=docx  -o "%:p:r"."docx"<CR>
+noremap <Leader>o :!pandoc % --from=gfm --to=odt -o "%:p:r"."odt"<CR>
+noremap <Leader>d :!pandoc % --from=gfm --to=docx -o "%:p:r"."docx"<CR>
+noremap <Leader>p :!pandoc % --from=gfm -o "%:p:r"."pdf" --metadata pagetitle="%:p:r" --css="%:p:r"."css" --pdf-engine=wkhtmltopdf<CR>
 noremap <Leader>v :!okular % & <CR>
 " %!markdown fname<CR>
 " An example of applying a filter:
 " p for Plantuml
-noremap <Leader>p :!pandoc --standalone --from=gfm --to=html --filter pandoc-plantuml % -o "%:p:r"."html"<CR>
+" noremap <Leader>p :!pandoc --standalone --from=gfm --to=html --filter pandoc-plantuml % -o "%:p:r"."html"<CR>
 
 " Create html, open in browser
 noremap <Leader>b :!pandoc --standalone --from=gfm --to=html5 --css="%:p:r"."css" --metadata pagetitle="%:p:r" % -o "%:p:r"."html" && firefox --private-window "%:p:r"."html" &<CR>
