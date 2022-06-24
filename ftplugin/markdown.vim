@@ -8,7 +8,7 @@
 " so `:pwd` to see where you are, and `:cd` if necessary.
 noremap <F5> :!chromium --incognito %<CR>:p<CR>
 noremap <Leader>m :!markdown % > "%:p:r"."html"<CR>
-noremap <Leader>h :!pandoc --standalone --from=gfm --to=html5 --css="%:p:r"."css" --metadata pagetitle="%:p:r" % -o "%:p:r"."html"<CR>
+noremap <Leader>h :!pandoc --standalone --from=gfm --to=html5 --css="%:p:r"."css" --metadata pagetitle="%:r" % -o "%:p:r"."html"<CR>
 noremap <Leader>w :!pandoc % --from=gfm --to=mediawiki -o "%:p:r"."wiki"<CR>
 noremap <Leader>o :!pandoc % --from=gfm --to=odt -o "%:p:r"."odt"<CR>
 noremap <Leader>d :!pandoc % --from=gfm --to=docx -o "%:p:r"."docx"<CR>

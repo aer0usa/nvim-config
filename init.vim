@@ -40,6 +40,19 @@ call plug#end()
   set foldlevel=99
   set ignorecase        "ignore the case when search texts
   set smartcase         "if searching text contains uppercase case will not be ignored
+	"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+	" Temporary file directories - Not needed for NeoVim
+	" set undofile                " enable undo file
+	" set undolevels=1000         " How many undos
+	" set undoreload=10000        " number of lines to save for undo
+	" set backup                  " enable backups
+	" set swapfile                " enable swaps
+	" Trailing double slash uses buffer's full path as filename to ensure uniqueness
+	" See ':help directory'
+	" set undodir=$HOME/vimfiles/tmp/undo//
+	" set backupdir=$HOME/vimfiles/tmp/backup//
+	" set directory=$HOME/vimfiles/tmp/swap//
+	"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Lookings
   set showtabline=1    "show tab line only if there is more than one tab
   set number           "line number
