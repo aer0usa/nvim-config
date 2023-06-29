@@ -17,6 +17,20 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'Xuyuanp/nerdtree-git-plugin'
+  " PHP plugins
+  Plug 'SirVer/ultisnips'
+  """
+  Plug 'ncm2/ncm2'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+  """
+  Plug 'phpactor/phpactor', { 'do': ':call phpactor#Update()', 'for': 'php'}
+  Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
+  Plug 'ncm2/ncm2-ultisnips'
+  """
+  Plug 'StanAngeloff/php.vim', {'for': 'php'}
+  """
+	Plug 'adoy/vim-php-refactoring-toolbox', {'for': 'php'}
 call plug#end()
 " :source %
 " :PlugInstall
@@ -108,6 +122,12 @@ call plug#end()
   nmap <C-n> :NERDTreeToggle<CR>
   let g:NERDTreeQuitOnOpen = 1
 " EndNERDTree
+" ------------------------------------------------------------
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+" End UltiSnips
 
 " Lorem Ipsum in register 'l': "lp
 let @l = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
