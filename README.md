@@ -1,14 +1,8 @@
-# Nvim Config
+# Nvim Lua Config
 
-My init.vim and ftplugins
+My init.lua and config: [Starting from scratch](https://github.com/LunarVim/Neovim-from-scratch)
 
 * Clone this into `~/.config/nvim/`
-    * For the Plugins in init.vim to work, you'll need to install `plug.vim` to `~/.local/share/nvim/site/autoload`
-
-```
-curl -fLo ~/.local/share/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
 * Make soft link from `ftplugin/` to `~/.local/share/nvim/site/ftplugin/`
 
 Unfortunately, the install and config folders seem to vary from platform to platform. YMMV.
